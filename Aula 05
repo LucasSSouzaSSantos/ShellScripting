@@ -1,0 +1,102 @@
+Aula 05: Arquivos de configurações profile, bashrc e outros
+
+Variáveis de ambiente, funçoes e aliases podem ser configurados
+automaticamente pelo bash com o uso de alguns arquivos de 
+configuração, de modo a definir o ambiente operacional ao iniciar
+o sistema.
+
+Cada arquivo de configuração tem um escopo e momento de uso 
+definidos, e o arquivo usado depende do método usado para iniciar
+o bash. Há três formas de se iniciar o bash:
+- Como um shell de login padrão na inicialização;
+- Como um shell interativo que não é o shell de login;
+- Como um shell não interativo para rodar um script.
+
+Arquivo: /etc/profile
+Uso: Arquivo de inicialização, executado durante o login e 
+válido para todo o sitema; contém variáveis de ambiente e 
+programas de inicialização
+
+Arquivo: /etc/bashrc ou /etc/bahs.bashrc
+Uso Arquivo de inicialização, válido para todo o sistema,
+executado pelo .bashrc do usuário para cada shell bash iniciado.
+Contém funções e aliases.
+
+Arquivo: ~/.bash__profile
+Uso: Se existir, será executado após /etc/profile durante o
+login
+
+Arquivo: ~/.bash__login 
+Uso: Se o .bash_profile não existir, será executado 
+automaticamente durante o login
+
+Arquivo: ~/.profile
+Uso: Se nenhum dos dois anteriores existirem, será executado
+automaticamente no login
+
+Arquivo: ~/bashrc
+Uso: Executado automaticamente quando o bash é iniciado 
+interativamente.
+
+Arquivo: ~/.inputre
+Uso: Contém variaveis e configurações do modo de operação do 
+bash em relação às teclas(vinculação).
+
+Arquivo: ~/.bash_logout
+Uso: Executado automaticamente no logout
+
+Shell de Login
+
+Quando nos logamos no sistema Linux, o shell bash é inicido Com
+um shell de login.
+Esse shell procura por quatro arquivos de inicialização para 
+processar seus comandos, na seguinge ordem:
+
+/etc/profile
+~/.bash__profile
+~/.bash__login
+~/.profile
+
+Shell Interativo
+
+Quando o bash é iniciado como um shell interativo, ele não 
+processa o arquivo /etc/profile; em vez disso, ele tenta executar
+o arquivo .bashrc no diretório do usuário atual.
+
+O arquivo .bashrc pode ser usado para que o usuário insira 
+aliases personalizados e funções de scripts pessoais.
+
+Também executa o arquivo global /etc/bashrc ou /etc/bash.bashrc,
+o qual configura algumas variáveis de ambiente locais.
+
+Shell Não-Interativo
+
+É o shell iniciado para executar um script (shell script).
+
+Quando um shell é iniciado em modo não-interativo, ele verifica
+a variável de ambiente BASH__ENV para descobrir se há comandos 
+de inicialização a executar.
+
+Por padrão, o valor desta variável não é configurado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

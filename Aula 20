@@ -1,0 +1,59 @@
+Aula 20: Estrutura de Repetição While
+
+O comando while permite definir um comando a testar e então 
+iterar por um conjunto de comandos enquanto o comando definido
+de teste retornar status de saída zero.
+Quando o comando de teste retornar status de saída diferente de
+zero, o whilw pára de executar seu bloco de comandos e o loop é
+encerrado. 
+
+While - Sintaxe
+
+while comando_de_teste
+do
+  bloco de comandos
+done
+
+O comando_de_teste usa o mesmo formato da estrutura if-then, e
+podemos usar o comando test para testar condições.
+Obs.: o status de saída do comando de teste deve mudar em algum
+momento durante as iterações, ou teremos um loop infinito.
+
+Exemplo - comando while
+
+#!/bin/bash
+# Testando o comando while
+
+var=100
+while [ $var -gt 0 ]
+do
+  eco $var
+  var=$[ $var -1 ]
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+Aula 06: Criando scripts simples - comando echo -
+
+É possível encadear múltiplos comandos em sequência no bash,
+bastando para isso separá-los com um ponto-e-vírgula:
+
+cd /;ls-l
+
+Essa sequência pode ser considerada como um script do shell 
+ultra-simples.
+Claro que toda vez que for necessário a execução dessa 
+sequência, devem-se digitar todos os camandos novamente. Para 
+evitar esse problema, criaremos arquivos de script contendo os 
+coamandos que queremos executar.
+
+Arquivo de Script 
+
+Para criar um arquivo de script, use um editor de texto de sua
+preferência(vi, nano, emacs, gedit) e crie um arquivo. 
+A primeira tarefa é especificar qual shell será usado na primeira
+linha do arquivo:
+
+#!/bin/bash
+
+O símbolo # representa uma linha de comentário, exceto na
+primeira linha do arquivo, onde a combinação #! indica o shell
+que rodará o script.
+
+
+Após especificar o shell podemos entrar com os comandos a serem
+executados, juntamente com os comentários necessários:
+
+#!/bin/bash
+# Este é meu primeiro script do bash
+cd/
+ls -l
+
+O shell processará os comandos na ordem em que aparecem no 
+arquivo.
+
+Após digitar os comandos desejados no arquivo de script, salve-os
+com o nome desejado.
+É então necessário dar permissão de execução ao script, caso 
+contrário ele não rodará:
+
+chmod a+x meuscript.sh
+
+Opcionalmente, adicione também o script a algum diretório 
+presente na variável PATH, ou adicione o diretório que o contém 
+a essa variável.
+
+Rode o script então chamando-o pelo nome:
+
+meuscript.sh
+
+# agora dentro do scrip, após a ultima linha, vai ser colocado o
+# comando echo.
+
+... continuação
+
+echo "Esta é a listagem de arquivos e diretórios dentro da raiz"
+
+# eu posso usar o camando echo -n, para que o próximo script seja
+# executado na mesma linha do ante penultimo.
+
+echo "O usuário logado no momento é "
+whoami
+
+...

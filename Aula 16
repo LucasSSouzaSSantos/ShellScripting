@@ -1,0 +1,108 @@
+Comparações de Arquivos
+
+As comparações de arquivos são o tipo de comparações mais
+poderosas e mais usadas em shell Scripting.
+O comando test permite testar o status de arquivos e diretórios
+no sistema de arquivos Linux, conforme a tabela a seguir.
+
+
+	    Comparações numéricas com test
+
+--------------------------------------------------------------
+Comparação 		Descrição				
+--------------------------------------------------------------
+-d arquivos		Verifica se o arquivo existe e se é um
+			diretório				
+--------------------------------------------------------------
+-e arquivo		Verifica se o arquivo existe		
+--------------------------------------------------------------
+-f arquivo		Verifica se o arquivo existe e se um 
+			arquivo					
+--------------------------------------------------------------
+-r arquivo		Verifica se o arquivo existe e se possui
+			permissão de leitura para o usuário atual
+--------------------------------------------------------------
+-s arquivo		Verifica se o arquivo existe e não está
+			vazio					
+--------------------------------------------------------------
+-w arquivo		Varifica se o arquivo existe e tem 
+			permissão de escrita			
+--------------------------------------------------------------
+-x arquivo		Verifica se o arquivo existe e tem 
+			permissão de execução			
+--------------------------------------------------------------
+-O arquivo		Verifica se o arquivo existe e é 	
+			propriedade do usuário atual		
+--------------------------------------------------------------
+-G arquivo		Verifica se o arquivo existe e seu grupo
+			padrão é o mesmo do usuário atual	
+--------------------------------------------------------------
+arq1 -nt arq2		Verifica se arq1 é mais novo que arq2	
+--------------------------------------------------------------
+arq1 -ot arq2		Verifica se arq1 é mais antigo que arq2
+--------------------------------------------------------------
+
+Exemplos de comparações de arquivos
+
+exemplo 1
+
+#!/bin/bash
+# Verificar se o diretório HOME do usuário
+# e mostrar o conteúdo
+
+if [ -d $HOME ]
+then
+echo "Seu diretório home existe e o conteúdo é:"
+cd $HOME
+ls -l
+else
+echo "Diretório não encontrado"
+fi
+
+exemplo2
+
+#!/bin/bash
+#Verificar se um objeto é um arquivo
+if [ -e $HOME ]
+then 
+  echo "O objeto existe. Vamos ver se é arquivo ou diretório"
+  if [ -f $HOME ]
+  then 
+  echo "É um arquivo"
+  else
+  echo "É um diretório"
+  fi
+  else
+  echo "Objeto não encontrado"
+fi
+
+exemplo3 
+
+#!/bin/bash
+# Verificar permissão de leitura em um arquivo
+arquivo=/etc/passwd
+# testar se o arquivo existe:
+
+if [ -f $arquivo ]
+
+then
+
+  # Existe, testar se o usuário tem permissão de leitura
+  if [ -r $arquivo ]
+  then
+    tail -5 $arquivo
+  else
+    echo "Sem permissão de leitura!"
+  fi
+else
+  echo "Arquivo não encontrado"
+fi
+
+
+
+
+
+
+
+
+

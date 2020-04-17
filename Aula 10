@@ -1,0 +1,40 @@
+Aula 10: Cálculo matemático no bash
+
+Cálculo Matemáticos 
+
+É possível realizar cálculos matemáticos diretamente no bash, e
+atribuir o resultado de uma operação a uma variável. Para isso,
+englobe a equação usando um cifrão e colchetes: 
+Variável=$[operação]
+
+Exemplo: 
+var1=$[2+6]
+echo $var1
+var2=$[$var1*2]
+echo $var2
+
+Cálculos no bash - problema
+
+Porém, há um problema em realizar cálculos com o shell bash:
+seus operadores matemáticos só suportam aritmética de números
+inteiros. Veja:
+
+var1=9
+var2=2
+var3=$[$var1/$var2]
+echo "Resultado: $var3"
+
+O resultado deveria ter sido 4.5, mas o shell retornou 4.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+Aula 01: Introdução e Conceitos Básicos
+
+Personalizar e usar ambiente do Shell
+
+----------------- Shell --------------------------
+  O Shell é um programa de usuário, que oferecem uma interface
+personalizável para seu sistema.(para se comunicar com o Kernel
+do seu sistema).
+- São uma interface de texto e interativa para o sistema 
+operacional - "intérprete de comandos"
+- São um ambiente de execução de outros programas, consistindo
+em um número de variáveis de ambiente.
+- Oferecem suas linguagens de programação; programas completos 
+podem ser escritos nas linguagens dos shells.
+
+Os Shells são personalizáveis, podendo-se ajustar o ambiente
+operacional
+São distintos do Kernel
+Executados para uso interativo pelos usuários, e para uso não-
+interativo pelo sistema
+Usam vários arquivos de configuração para seus ambientes 
+operacionais
+Podem ser executados dentro de outros shells.
+
+Exemplos de Shells
+- sh
+- bash
+- ksh
+- zsh
+- csh
+- tcsh
+

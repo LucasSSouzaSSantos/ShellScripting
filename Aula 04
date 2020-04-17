@@ -1,0 +1,42 @@
+Aula 4: Aliases e Funções no Bash
+
+É possível difinir um alias para um comando ou sequência de 
+comandos usados com frequência.
+
+alias mo='more'
+alias lshome='cd /home; ls'
+
+Também permite modificar o comportamento padrão de um comando.
+
+alias lsl='ls-l'
+
+Para lisar os aliases criados, digite alias sem parâmetros.
+Por padrão, os aliases são loeais ao shell e não são repassados
+a outros programas.
+Para excluir um alias criado, use unalias nome_alias
+
+Funções
+
+O bash também permite trabalhar com funçoes, que são parecidas
+os aliases -mas em vez de comandos, temos pequenos programas.
+
+Sintaxe:
+nome_função(){comandos}
+
+Exemplo: 
+palavra(){
+>cd /home/fabio
+>echo 'Linha acrescentada' >> test_func
+>}
+
+
+
+
+
+
+
+
+
+
+
+

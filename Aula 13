@@ -1,0 +1,51 @@
+Aula 13: Estrutura de decisão condinional if then else
+
+Decisão Condicional: If-Then
+
+Sintaxe:
+if comando
+then
+  comandos
+fi
+
+ou if comando; then
+    comandos
+fi
+
+Na estrutura Condicional do shell ele testa a saída de um
+comando ou o status de saída de um comando; diferente do if 
+convencional que testa um estrutura de comando lógico.
+
+Como funciona ?
+
+A declaração if do shell bash executa o comando definido na liha
+if.
+Se o status de saída do comando for zero, os comandos listados 
+após a seção then serão executados.
+Caso contrário, esses comandos serão ignorados.
+
+OBS.: O status de saída é jogado no IF
+
+Decisão Condicional: If-Then-Else
+
+if comando 
+then
+comandos
+else
+camandos
+fi
+
+O condicional composto permite executar um bloco de código caso 
+o camando testado retorne código de status zero, e outro bloco 
+de código caso retorne status diferente de zero.
+
+
+#!/bin/bash
+# Teste de condicional composto
+
+if ls /home/usuario/teste
+then
+  echo "Diretório teste encontrado!"
+else
+  echo "Diretório teste não encontrado"
+fi

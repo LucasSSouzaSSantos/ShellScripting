@@ -1,0 +1,33 @@
+Aula 03: Arrays - Variáveis de Ambiente com múltiplos valores
+
+Arrays de Ambiente
+
+Variáveis de ambiente podem ser usadas com arrays - variáveis 
+que podem armazenar múltiplos valores. 
+Para configurar um array,liste os seus valores entre parênteses:
+
+testearry=(laranja morango acerola abacaxi)
+
+Para acessar um elemento no arry, use seu número de índice
+(entre colchetes) contando a partir de zero (todo o conjunto 
+entre chaves):
+
+echo ${testearry[1]}
+
+Para mostrar todo conteúdo do array, use o asterisco * no lugar
+do índice:
+
+echo ${testearry[*]}
+
+Se eu der o comando echo $testearry sem colocar entre chaves e 
+sem atribuir indice nenhum, ele vai me retornar o primeiro 
+elemento ou o elemento de indice zero.
+
+Alterar valores de uma posiçaõ específica:
+testearry[2]=banana
+
+Remover itens individuais:
+unset testearry[2]
+
+Remover o array todo:
+unset testearry[*]

@@ -1,0 +1,24 @@
+Aula 07: Usando variáveis de ambiente nos script
+
+#!/bin/bash
+# Informações sobre o usuário:
+echo "Usuário: $USER"
+echo "Diretório home: $HOME"
+echo "UID do usuário: $UID"
+
+Usando Variáveis de Usuário
+
+Você pode criar suas próprias variáveis dentro de um script.
+Variáveis de usuário podem conter até 20 caracteres no nome, e 
+são case-sensitive.
+O shell determina automaticamente o tipo das variáveis criadas.
+As variáveis criadas pelo usuário são desalocadas quando termina
+a execução do script.
+
+Criando Variáveis de Usuário
+
+#!/bin/bash
+# Teste de variáveis
+idade=25
+nome="Monica"
+echo "A $nome tem $idade anos de idade"

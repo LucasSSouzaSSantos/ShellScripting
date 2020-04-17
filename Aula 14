@@ -1,0 +1,47 @@
+Aula 14: Condicional aninhado if-then com elif
+
+Condicional if aninhado 
+
+Às vezes é necessário verificar várias situações relacionadas
+seu script.
+
+Em vez de ter de escrever declarações if-then separadas, você 
+pode usar uma versão alternativa da seção else, chamada elif
+
+O elif continua uma seção else com outra declaração if-then.
+Veja a sintaxe no próximo slide.
+
+O shell bash executará as declarações if em ordem, e apenas a 
+primeira que retornar status de saída 0 terá a seção then 
+correspondente executada.
+
+if comando1
+then
+comandos
+elif comando2
+then
+coandos2
+elif comando3
+then
+comandos3
+else
+comandos-else
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

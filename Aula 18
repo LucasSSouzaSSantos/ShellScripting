@@ -1,0 +1,91 @@
+Aula 18: Comando case - Teste de múltiplas condições
+
+Comando Case
+
+Esse comando verifica condições múltiplas que podem ocorrer em
+uma variável, em um formato parecido com uma lista.
+A estrutura case substitui e simplifica o uso do if-then-elif 
+com várias declarações.
+O comando case compara o valor de uma variável ou expresso com 
+os valores da lista criada.
+Se os valores "baterem", o shell executará os comandos 
+especificados para o valor.
+
+Comando case - Sintaxe
+
+case <variável> in 
+  valor1)
+    comandos 1;;
+  valor2)
+    comandos 2;;
+  valor3) | valor4)
+    comandos 3 e 4;;
+  *)
+    comandos-padrão;;
+  esac
+  
+Exemplo de uso do comando case:
+
+# Usando o comando case
+local=quarto
+
+case $local in
+quarto)
+  echo "Você está no quarto";;
+cozinha)
+  echo "Aqui é a cozinha";;
+sala)
+  echo "Está na sala agora";;
+banheiro | lavanderia)
+  echo "Foi ao banheiro ou à lavanderia";;
+*)
+  echo "Você não está dentro de casa";;
+esac
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

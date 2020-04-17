@@ -1,0 +1,59 @@
+Aula 02: Variáveis de Ambiente e comandos env, unset e echo
+
+--------------- Variáveis de ambiente ----------------------
+
+ Vários programas precisam de informações sobre o usuário e suas 
+preferências para poderem rodar. Para evitar que você tenha de 
+passar esses dados a cada comando que executa(ex.: caminhos de 
+diretórios de bibliotecas), o shell cria um ambiente operacional
+composto de inúmeras variáveis.
+Essas variáveis contém valore que são usados pelos programas e
+por outros shells.
+Há dois tipos de variáveis de ambiente:
+- Variáveis de ambiente globais
+- Variáveis do shell( locais)
+
+Variávies globais:
+
+São como "variáveis globais", pois podem ser passadas a todos os
+subprocessos do shell, incluindo outros shells.
+Exemplos:
+PATH - Lista de diretórios de programas executáveis
+USERNAME- Nome do usuário logado
+TERM- Tipo de terminal ou janela de terminal em uso
+HOME- Diretório home do usuário atual
+UID- UID do usuário atual
+RANDOM- Gera um número aleatório
+LANG- Idioma, especificado como locale
+
+Os comandos env e printenv mostram as variávies de ambiente no 
+terminal
+Para criar uma variável global, crie uma local e depois exporte-
+a com o comando export.
+
+Variáveis locais:
+
+São como "Variáveis locais", pois são específicas do shell atual.
+Outros programas e shells não as herdam.
+Ex.: SECOND- nº de segundos desde que o shell foi inciado
+SHELL- indica qual shell em uso atualmente
+
+Podemos criar uma variável nova digitando um par NOME = valor no
+terminal:
+
+// na criação da variável não pode colocar espaço
+teste = 'teste' vai dar erro
+teste='teste'   ok
+
+E verificamos seu valor com o camando echo:
+
+echo $teste
+
+Podemos disponibilizar a variável criada para outros shells ou 
+programas com o comando export:
+
+export teste
+
+E podemos remover uma variável de ambiente com o comando unset
+
+unset teste

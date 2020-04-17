@@ -1,0 +1,43 @@
+Aula 26: Comando read - interação com usuário - Ler dados do 
+teclado e de arquivos
+
+O comando read aceita entrada de dados da entrada padrão ou de 
+outro descritor de arquivos.
+Após receber a entrada, o comando read coloca os dados em uma 
+variável padrão.
+Exemplo:
+
+#!/bin/bash
+# teste de comando read
+printf"Digite seu nome: "
+read nome
+echo Seu nome é $nome
+
+Se não for especificado nenhuma variável para receber os dados no
+comando read, então o valor lido será colocado na variável de 
+ambiente REPLY:
+
+#!/bin/bash
+# teste de read e variável de ambiente REPLY
+read -p "Digite sua idade:"
+echo você tem $REPLY anos de idade!
+
+COMANDO READ COM TIMER
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

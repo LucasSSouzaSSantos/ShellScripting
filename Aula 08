@@ -1,0 +1,50 @@
+Aula 08: Redirecionar comandos para variáveis com a crase
+
+Redirecionar saída de comandos a variáveis
+
+Usando crases (backtick`)
+As crases permitem atribuir a saída de um comando do shell a uma
+variável
+O comando todo deve estar entre crases:
+
+dia=`date`
+echo "A data é $dia"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

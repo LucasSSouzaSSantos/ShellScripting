@@ -1,0 +1,61 @@
+Aula 23: Ler dados do teclado - Parâmetros de Linha de 
+Comando
+
+Manipular entradas de usuários
+
+Frequentemente, precisamos escrever scripts que interajam com o
+usuário.
+Há algumas formas de se obter dados dos usuários no shell, como
+parâmentros de linha de comando, opções e leitura de dados 
+diretamente do teclado.
+
+É o método para passar dados ao script do shell. Os parâmetros
+de linha de comando permitem adicionar valores de dados à linha
+de comandos ao executar o script.
+Para passar parâmetros a um script, digite-os após o nome do 
+script, ao executá-lo
+./scriptqualquer parâm1 parâm2... .paramN
+
+Leitura dos parâmetros
+
+O shell bash atribui variáveis especiais, denominadas parâmetros
+posicionais, a todos os parâmentros digitados na linah de
+comandos.
+Os parâmetros posicionais são números, sendo $0 o nome do 
+programa, $1 o primeiro parâmetro, $2 o segundo, e assim por 
+diante até o nomo, que é o $9.
+Pra adicionar mais parâmetros, englobe o nº do parâmetro entre
+parâteses:$(10) >>> décimo parâmetro.
+
+Exemplo com um parâmetro
+
+#!/bin/bash
+# Teste de parâmetros na linha deo comandos
+
+echo "Programa que calcula o quadrado de um número"
+
+quadrado=$[$1 *$1]
+echo "O quadrado de $1 é $quadrado"
+
+para executá-lo e calcular o quadrado de 9:
+.scriptquadrado 9
+
+Variáveis de parâmetros especiais
+
+Há algumas variáveis especiais disponíveis no shell bash.
+A variável especial $# contém o númeroode parâmetros de linha de
+comando fornecidos ao rodar o script. Podemos usá-la para
+verificar se o usuário digitou o nº de parâmetros necessários
+pra rodar o programa corretamente.
+
+Exemplo de variável $#
+
+#!/bin/bash
+# Verificação de número de parâmetros 
+if [ $# -ne 1 ]
+then
+  echo "Digite ao menos um valor!"
+else
+  result=$[$1 * 3 ]
+  echo "O triplo de $1 é $result" 
+fi

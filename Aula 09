@@ -1,0 +1,52 @@
+Aula 09: Redirecionamento de entrada e saída de dados
+
+Redirecionamento de Saída
+
+O mais comum é enviar a saída de um comando para um arquivo.Para
+isso, use o símbolo:>
+comando > arquivo_saída
+
+ls > arq.txt
+
+Caso queira acrescentar a saída e um comando a um arquivo em vez
+de sobrescrevê-lo, use o símbolo duplo: >> 
+comando >> arquivo_saída
+
+date >> arq.txt
+
+Redirecionamento de Entrada
+
+Em vez de redirecionar a saída de um comando para um arquivo, é
+possível tomar o conteúdo de um arquivo e redirecioná-lo para um
+comando.
+Para isso, use o símbolo: <
+comando < arquivo_entrada
+wc < arq.txt
+
+O Comando wc produz contagem de texto do arquivo. Por padrão 
+mostra três valores:
+- N de linhas do texto;
+- N de palavras
+- N de bytes
+
+Redirecionamento de Entrada Inline
+
+Com este método é possível especificar os dados para
+redirecionamento na linha de comando em vez de um arquivo.
+O símbolo de redirecionamento de entrada inline é o <<; Você
+também deve especificar um marcador de texto que delineie o 
+início e o fim dos dads usados para entrada;
+
+wc << EOF
+> linha texto 1
+> linha texto 2
+EOF
+
+
+
+
+
+
+
+
+

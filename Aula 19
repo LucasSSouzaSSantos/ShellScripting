@@ -1,0 +1,101 @@
+Aula 19: Estrutura de repetição for
+
+Estruturas de Repetição
+
+O shell Bash oferece três estruturas de repetição para criação
+de loops estruturados. São elas os comandos:
+
+- for 
+- while 
+- until
+
+Comando for
+
+O comando for permite criar um loop que itera através de uma 
+série de valores.
+Cada iteração executa um conjunto definido de comandos usando um
+dos valores da lista.
+Sintaxe básica:
+
+for valor in lista
+do
+  comandos
+done
+
+A cada iteração, a variável valor contém o valor atual da lista.
+
+Exemplo 01 - comando for 
+
+#!/bin/bash
+# Ler valores de uma lista, declarada no próprio comando for
+
+for valor in pastal pizza esfiha 'pão de queijo'
+do
+  echo Adoro $valor
+done
+
+Separador de campos: IFS
+
+Caso os itens iterados sejam compostos por palavras separadas 
+por espaços (como Ana Paulo), o comando for irá considerar cada
+palavra como um item separado.
+
+Isso é devido à variável de ambiente IFS(internal Field 
+Separator), a qual define uma lista de caracteres que o shell
+bash usa como separadores de campos.
+
+Sâo eles, por padrão: espaço, tabulação e newline. É possível 
+alterar essa lista de separadores.
+
+Exemplo 02 - comando for
+
+#!/bin/bash
+# Arquivo arq1 contém uma lista de nomes, um por linha,incluindo
+# nomes compostos.
+
+arquivo=/home/usuario/arq.txt
+IFS.OLD=$IFS
+IFS=$'\n'
+dir=0 // variável para contar o número de diretório
+arq=0 // variável para contar o número de arquivo
+
+for nome in `cat $arquivo`
+do
+  echo "O nome é: $nome"
+done
+IFS=$IFS.OLD
+
+// O comando cat vai retornar o conteúdo de arq1
+
+#!/bin/bash
+# iterando por todos os itens de um diretório
+
+for item in /home/usuario/*
+do
+  if [ -d "$item" ]
+  then
+    echo "O item $item é um diretório"
+    dir=$dir + 1
+  elif
+    echo "O intem $item é um arquivo"
+    arq=$arq + 1
+  then
+  fi
+done
+
+echo "Dentro dessa arquivo tem $dir DIRETÓRIO"
+echo "Dentro desse arquivo tem $arq ARQUIVO"
+
+
+
+
+
+
+
+
+
+
+
+
+
+

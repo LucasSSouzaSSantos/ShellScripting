@@ -1,0 +1,27 @@
+Aula 22: Comando for estilo Linguagem C
+
+Comando for no estilo Linguagem C
+
+É necessário usar uma estrutura de repetição for no estilo da 
+linguagem C em um script do shell. Neste caso, teremos uma 
+variável contadora que irá controlar o número de iterações do 
+loop.
+
+sintaxe:
+for(( atrib_variável; condição; processo_iteração ))
+
+#!/bin/bash
+# Exemplo de comando for no estilo linguagem C
+
+for (( i = 1; i <= 15; i++ ))
+do
+  echo "Número: $i"
+done
+
+
+
+
+
+
+
+
