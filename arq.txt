@@ -1,0 +1,32 @@
+anaconda3/
+Área de trabalho/
+Área de Trabalho@
+arq.txt
+Documentos/
+Downloads/
+Imagens/
+konsole.desktop*
+log.2810192227
+manual.desktop@
+meuscript.sh*
+meuscript.sh~*
+Modelos/
+Música/
+netbeans-8.2/
+NetBeansProjects/
+pycharm-community-2018.1.4/
+Python-3.7.0/
+spotify.desktop
+testecrase.sh*
+testecrase.sh~*
+teste_func
+testeuservar.sh*
+testeuservar.sh~*
+testevar2.sh*
+testevar.sh*
+testevar.sh~*
+Untitled1.ipynb
+Untitled.ipynb
+untitled.txt
+Vídeos/
+Ter Out 29 04:17:36 UTC 2019
